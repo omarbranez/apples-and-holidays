@@ -37,7 +37,7 @@ def add_supply_to_memorial_day(holiday_hash, supply)
   # again, holiday_hash is the same as the ones above
   # add the second argument to the memorial day array
 holiday_hash[:spring][:memorial_day]<<supply
-    #shovel supply underneath memorial day since it's the only one there
+                #shovel supply underneath memorial day since it's the only one there
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
@@ -82,14 +82,13 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   bbq_array = []                          #blank array, since the assignment wants the output formatted as such
   holiday_hash.each do |season, holiday|  #iterate through the first layer
-    holiday.each do |holiday2, supply|    #iterate through the second layer since bbq is in the third layer
-      if supply.include?("BBQ")           #do any of the supplies include the string bbq?
+    holiday.each do |holiday2, supply|    #iterate through the second layer since bbq is in the third layer    
+      if supply.include?("BBQ")    #do any of the supplies include the string bbq?
         bbq_array << holiday2             #if so, shovel them into the array we made
-      end
+        end
     end
   end
-  bbq_array                               #return it
-      
+  bbq_array                               #return it    
 end
 
 
