@@ -66,7 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
       holiday.each do |holiday2, supply|  #iterate the next two parts of the hash through each holiday's supplies. some holidays have underscores though
         day_array = []                    #we need to store our modified holidays to turn them back into
         temp_array = holiday2.to_s.split("_") #create a temporary array where we change the holiday names into strings and split them by removing the underscores
-        temp_array.collect {|holiday_word| day_array << holiday_word.capitalize!}
+        temp_array.collect {|holiday_word| day_array << holiday_word.capitalize}
                                           #for each word in the temporary array, capitalize and shovel them into the day_array
           holiday2 = day_array.join(" ")  #change value of unformatted holidays to result of last iteration. combine with spaces.
           supply = supply.join(", ")      #all supplies are already capitalized, we just need to seperate them with commas
